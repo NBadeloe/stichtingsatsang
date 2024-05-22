@@ -93,7 +93,7 @@
     background-color: brown;
     width: 100%;
     height: 40em;
-    background-image: url(../assets/Satsang-header.jpg);
+    background-image: url(static/assets/Satsang-header.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;

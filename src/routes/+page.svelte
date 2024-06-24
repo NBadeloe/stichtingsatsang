@@ -1,7 +1,11 @@
 <script>
+  import { formatDate } from "$lib/utils/date.js";
   export let data;
   const events = data?.allEvents || [];
   const tekst = data.homepage;
+  
+
+
 </script>
 
 <main>
@@ -27,7 +31,7 @@
       {#each events as event}
         <article class="event-card">
           <div class="event-date" style="background-color: #{event.soort};">
-            <h2>{event.datum}</h2>
+            <h2> {formatDate(event.datum)}</h2>
           </div>
 
           <div class="event-info" style="border: 3px solid #{event.soort};">

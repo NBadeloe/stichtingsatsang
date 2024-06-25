@@ -3,6 +3,9 @@
   export let data;
   const events = data?.allEvents || [];
   const tekst = data.homepage;
+  
+
+
 </script>
 
 <main>
@@ -97,7 +100,7 @@
     background-color: brown;
     width: 100%;
     height: 40em;
-    background-image: url(../assets/Satsang-header.jpg);
+    background-image: url(/assets/Satsang-header.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;

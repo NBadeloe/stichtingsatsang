@@ -10,10 +10,10 @@ export function formatDate(dateString) {
         day: 'numeric',
         hour: 'numeric',
         minute: 'numeric',
+
         timeZone: 'Europe/Amsterdam'
     }).format(date);
 
     return newDate;
 }
-
 // Verwachte output: "dag datum maand jaar om 24h tijd"

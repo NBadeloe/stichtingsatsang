@@ -23,6 +23,9 @@
     <article>
       {@html tekst.hindiLes}
     </article>
+    <article>
+      {@html tekst.seminar}
+    </article>
   </section>
 
   <section class="events">
@@ -31,7 +34,7 @@
       {#each events as event}
         <article class="event-card">
           <div class="event-date" style="background-color: #{event.soort};">
-            <h2> {formatDate(event.datum)}</h2>
+            <h2>{formatDate(event.datum)}</h2>
           </div>
 
           <div class="event-info" style="border: 3px solid #{event.soort};">
@@ -119,18 +122,25 @@
   .info {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
-    width: 100%;
-    height: 30em;
+    padding: 5em;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-around;
+    background-image: url(../assets/background-info.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
   }
 
   .info > article {
     border: 3px solid #f08b67;
+    background-color:#fdfdfdbb ;
     border-radius: 8px;
     width: 30%;
-    height: 25em;
-    margin: auto;
-    padding: 1em;
+    margin: 0 0.5em;
+    padding: 0.5em;
+    min-height: 100%;
+
   }
 
   .events {
@@ -145,7 +155,7 @@
     display: flex;
     flex-direction: column;
     width: 60%;
-    height: 40em;
+    height: 45em;
     margin: auto;
     margin-bottom: 6em;
     padding: 1em;
@@ -159,13 +169,13 @@
     padding: 1em;
     gap: 2em;
     width: 90%;
-    height: 15em;
+    height: 18em;
   }
   .event-date {
     padding: 1em;
     border-radius: 8px;
     width: 30%;
-    height: 12em;
+    height: initial;
   }
   .event-date > h2 {
     width: 100%;
@@ -179,23 +189,25 @@
   .event-info {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
-    padding: 0.5em;
+    justify-content: space-between;
     width: 80%;
-    height: 12em;
+    height: fit-content;
+    padding: 1em;
+    min-height: 100%;
     border: 1px solid #000;
     border-radius: 8px;
     word-wrap: break-word;
-    white-space: inherit;
-    word-break: break-word;
+    /* white-space: inherit; */
+    /* word-break: break-word; */
   }
   .event-info-btm > p {
     width: 50%;
-    height: 3.5em;
+    height: 5em;
   }
   .event-info-btm {
     display: flex;
     flex-direction: row;
+    width: 102%;
   }
   footer > img {
     object-fit: cover;
@@ -245,60 +257,64 @@
     .header-text {
       margin: 4vw auto;
       width: 90%;
-      height: 30em;
+      height: fit-content;
     }
     .info {
       display: flex;
       flex-direction: column;
       justify-content: space-evenly;
       width: 100%;
-      height: 30em;
+      height: fit-content;
     }
 
     .info > article {
-    border: 3px solid #f08b67;
-    border-radius: 8px;
-    width: 80%;
-    height: 25em;
-    margin: 2em auto;
-    padding: 1em;
-  }
-.events > h1{
-  margin: 24vh 13vh auto;
-  text-align: left;
+      border: 3px solid #f08b67;
+      border-radius: 8px;
+      width: 80%;
+      height: fit-content;
+      margin: 2em auto;
+      padding: 1em;
+    }
+    .events > h1 {
+      margin: 24vh 13vh auto;
+      text-align: left;
       width: 90%;
       height: 5vw;
-    font-size: 2.5em;
-}
+      font-size: 2.5em;
+    }
 
-.event-body{
-  width: 90%;
-}
+    .event-body {
+      width: 90%;
+      height: fit-content;
+    }
 
-.event-card{
-  flex-direction: column;
-  height: 30em;
-}
+    .event-card {
+      flex-direction: column;
+      height: fit-content;
+    }
 
-.event-date{
-  width: 100%;
-  height: 6em;
-  padding: 0.5em;
-}
+    .event-date {
+      width: 100%;
+      height: 6em;
+      padding: 0.5em;
+    }
 
-.event-info{
-  width: 100%;
-  height: 24em;
-}
+    .event-info {
+      width: 100%;
+      height: fit-content;
+    padding: 0.5em;
+    min-height: 100%
+    }
 
-.event-info-btm > p {
-    width: 80%;
-    height: 3.5em;
-  }
-  .event-info-btm {
-    display: flex;
-    flex-direction: column;
-  }
+    .event-info-btm > p {
+      width: 80%;
+      height: 3.5em;
+    }
+    .event-info-btm {
+      display: flex;
+      flex-direction: column;
+      height: fit-content;
+    }
   }
 
   @media only screen and (min-width: 700px),

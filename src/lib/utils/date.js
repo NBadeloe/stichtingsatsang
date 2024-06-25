@@ -4,15 +4,16 @@ export function formatDate(dateString) {
 
     var date = new Date(dateStr);
     var newDate = new Intl.DateTimeFormat('nl-NL', {
-        dateStyle: 'full',
-        timeStyle: 'short',
+        weekday: 'short' ,
+        year: 'numeric',
+        month: 'short' ,
+        day: 'numeric',
+        hour: 'numeric',
+        minute: 'numeric',
+
         timeZone: 'Europe/Amsterdam'
     }).format(date);
 
     return newDate;
 }
-
-// const datum = "2024-09-03T18:00:00+02:00";
-
-// console.log(formatDate(datum));
 // Verwachte output: "dag datum maand jaar om 24h tijd"
